@@ -6,14 +6,23 @@ app = Flask(__name__)
 
 # change below value based on your configuration
 ###############################################
-server_url = rk-vrit-postgres-flask-app01.postgres.database.azure.com
-db_name = flask-app-01
-username = vritadmin
-password = Abcd123456789!
+server_url = "rk-vrit-postgres-flask-app01.postgres.database.azure.com"
+db_name = "flask-app-01"
+username = "vritadmin"
+password = "Abcd123456789!"
 
 ####################################
 
-app.config['SQLALCHEMY_DATABASE_URI'] = postgresql:/username:password@server_url/db_name
+# Construct the SQLALCHEMY_DATABASE_URI using the variables
+
+database_uri = f"postgresql://{username}:{password}@{server_url}/{db_name}"
+
+# Assign the constructed URI to app.config
+app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
+
+
+
+
 db = SQLAlchemy(app)
 
 class User(db.Model):
