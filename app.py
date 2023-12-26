@@ -4,10 +4,16 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-# dbconnectingstring format postgresql://username:passowrd@server-url/dbname
-dbconnectingstring = 'postgresql://ngrsotnrxs:H442RCTCN2L25Y0Z$@db-postgres-flask-app-01.postgres.database.azure.com/flask-webapp-01'
+# change below value based on your configuration
+###############################################
+server_url = rk-vrit-postgres-flask-app01.postgres.database.azure.com
+db_name = flask-app-01
+username = vritadmin
+password = Abcd123456789!
 
-app.config['SQLALCHEMY_DATABASE_URI'] = dbconnectingstring
+####################################
+
+app.config['SQLALCHEMY_DATABASE_URI'] = postgresql:/username:password@server_url/db_name
 db = SQLAlchemy(app)
 
 class User(db.Model):
