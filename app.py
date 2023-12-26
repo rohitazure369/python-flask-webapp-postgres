@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 # change below value based on your configuration
 ###############################################
-server_url = "rk-vrit-postgres-flask-app01.postgres.database.azure.com"
-db_name = "flask-app-01"
-username = "vritadmin"
-password = "Abcd123456789!"
+server_url = "serverurl"
+db_name = "dbanme"
+username = "username"
+password = "password"
 
 ####################################
 
