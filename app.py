@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 # change below value based on your configuration
 ###############################################
-server_url = "serverurl"
-db_name = "dbanme"
-username = "username"
-password = "password"
+server_url = "rkpostgressql.postgres.database.azure.com"
+db_name = "pythontaskapp"
+username = "sqladmin"
+password = "AzureAdmin100!"
 
 ####################################
 
